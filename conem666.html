@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONEM 2026 | A Revolução da Medicina</title>
+    <!-- Framework & Fonts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        :root {
+            --bg-deep: #002846;
+            --cta-primary: #E23100;
+            --highlight-gold: #FF9311;
+            --secondary-petroleum: #16607C;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-deep);
+            color: #FFFFFF;
+            overflow-x: hidden;
+            margin: 0;
+        }
+
+        h1, h2, h3, h4, .font-montserrat {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* Glassmorphism de Altíssimo Padrão */
+        .glass-premium {
+            background: rgba(22, 96, 124, 0.12);
+            backdrop-filter: blur(25px) saturate(180%);
+            -webkit-backdrop-filter: blur(25px) saturate(180%);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+        }
+
+        .glass-card {
+            background: rgba(22, 96, 124, 0.2);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 147, 17, 0.15);
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        
+        .glass-card:hover {
+            background: rgba(22, 96, 124, 0.3);
+            border-color: rgba(255, 147, 17, 0.4);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Efeitos de Glow e Animações */
+        .glow-orange {
+            box-shadow: 0 0 25px rgba(226, 49, 0, 0.4), 0 0 50px rgba(226, 49, 0, 0.1);
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(226, 49, 0, 0.4); transform: scale(1); }
+            50% { box-shadow: 0 0 45px rgba(226, 49, 0, 0.7); transform: scale(1.03); }
+        }
+        .animate-pulse-cta {
+            animation: pulse-glow 2.5s infinite ease-in-out;
+        }
+
+        @keyframes blob-move {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(40px, -60px) scale(1.1); }
+            66% { transform: translate(-30px, 30px) scale(0.9); }
+        }
+        .animate-blob {
+            animation: blob-move 18s infinite alternate ease-in-out;
+        }
+
+        /* Reveal on Scroll */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .text-glow-gold {
+            text-shadow: 0 0 15px rgba(255, 147, 17, 0.5);
+        }
+
+        .sand-texture {
+            background-image: url('https://www.transparenttextures.com/patterns/p6.png');
+            opacity: 0.04;
+        }
+
+        /* Grain Overlay */
+        .grain {
+            pointer-events: none;
+            position: fixed;
+            inset: -50%;
+            width: 200%;
+            height: 200%;
+            background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+            opacity: 0.12;
+            z-index: 9999;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #001a2e; }
+        ::-webkit-scrollbar-thumb { background: #16607C; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #FF9311; }
+
+        /* Helpers */
+        .mask-gradient {
+            mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+        }
+    </style>
+    
+        <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KCXGMZF2');</script>
+<!-- End Google Tag Manager -->
+
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2140546260075228');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2140546260075228&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KCXGMZF2"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+    <div class="grain"></div>
+
+    <!-- NAVBAR -->
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-500 py-6">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center space-x-3 cursor-pointer group">
+                <!-- Logomarca em PNG conforme solicitado -->
+                <img src="logoconem.png" alt="CPMED Logo" class="h-12 md:h-14 w-auto transform transition-transform group-hover:scale-110 group-hover:rotate-2">
+            </div>
+            
+            <!-- Menu links (Desktop) -->
+            <div class="hidden md:flex gap-10 text-[11px] font-bold tracking-[0.2em] uppercase items-center">
+                <a href="#visao" class="relative text-white/70 hover:text-white transition-colors after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[1px] after:bg-[#FF9311] after:transition-all hover:after:w-full">Visão</a>
+                <a href="#local" class="relative text-white/70 hover:text-white transition-colors after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[1px] after:bg-[#FF9311] after:transition-all hover:after:w-full">Local</a>
+                <a href="#minicursos" class="relative text-white/70 hover:text-white transition-colors after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[1px] after:bg-[#FF9311] after:transition-all hover:after:w-full">Minicursos</a>
+                <a href="#cientifico" class="relative text-white/70 hover:text-white transition-colors after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[1px] after:bg-[#FF9311] after:transition-all hover:after:w-full">Científico</a>
+            </div>
+            
+            <!-- Botões / Call To Actions (Desktop) -->
+            <div class="hidden md:flex items-center gap-4">
+                <a href="https://web.eventogyn.com.br/event/conem2026/site/content/area-do-participante" target="_blank" rel="noopener noreferrer" class="border border-white/20 hover:border-[#FF9311] hover:text-[#FF9311] text-white px-5 py-3 rounded-full text-xs font-bold transition-all hover:scale-105 active:scale-95 uppercase tracking-widest bg-white/5">
+                    Área do Congressista
+                </a>
+                <a href="#oferta" class="bg-[#E23100] text-white px-6 py-3 rounded-full text-xs font-black glow-orange transition-all hover:scale-105 active:scale-95 uppercase tracking-widest text-center">
+                    Inscreva-se!
+                </a>
+            </div>
+
+            <!-- Botão Sanduíche (Mobile) -->
+            <button id="menu-toggle" class="md:hidden text-white focus:outline-none p-2 hover:text-[#FF9311] transition-all" aria-label="Abrir Menu">
+                <i data-lucide="menu" id="icon-menu" class="w-8 h-8 transition-transform duration-300"></i>
+                <i data-lucide="x" id="icon-close" class="w-8 h-8 hidden transition-transform duration-300"></i>
+            </button>
+        </div>
+
+        <!-- Painel do Menu Mobile (com scroll e animação suave) -->
+        <div id="mobile-menu" class="absolute top-full left-0 w-full bg-[#002846]/95 backdrop-blur-2xl border-b border-white/5 transition-all duration-300 origin-top overflow-hidden max-h-0 opacity-0 pointer-events-none">
+            <div class="flex flex-col gap-6 px-6 py-8 text-[11px] font-bold tracking-[0.2em] uppercase border-t border-white/5">
+                <a href="#visao" class="mobile-link text-white/70 hover:text-white transition-colors py-2 border-b border-white/5">Visão</a>
+                <a href="#local" class="mobile-link text-white/70 hover:text-white transition-colors py-2 border-b border-white/5">Local</a>
+                <a href="#minicursos" class="mobile-link text-white/70 hover:text-white transition-colors py-2 border-b border-white/5">Minicursos</a>
+                <a href="#cientifico" class="mobile-link text-white/70 hover:text-white transition-colors py-2 border-b border-white/5">Científico</a>
+                
+                <a href="https://web.eventogyn.com.br/event/conem2026/site/content/area-do-participante" target="_blank" rel="noopener noreferrer" class="mobile-link w-full text-center border border-white/20 hover:border-[#FF9311] text-white py-4 rounded-xl text-xs font-bold uppercase tracking-widest bg-white/5 mt-2 transition-all">
+                    Área do Congressista
+                </a>
+                <a href="#oferta" class="mobile-link w-full text-center bg-[#E23100] text-white py-4 rounded-xl text-xs font-black glow-orange transition-all hover:scale-[1.02] active:scale-95 uppercase tracking-widest transition-all">
+                    Inscreva-se!
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="relative min-h-screen flex flex-col items-center justify-center pt-32 pb-12 overflow-hidden bg-[#002846]">
+        <!-- Background elements -->
+        <div class="absolute inset-0 z-0 opacity-25 pointer-events-none scale-110">
+            <img src="recife.webp" class="w-full h-full object-cover grayscale mix-blend-overlay" alt="Recife">
+            <div class="absolute inset-0 bg-gradient-to-b from-[#002846] via-transparent to-[#002846]"></div>
+        </div>
+        
+        <div class="container mx-auto px-6 relative z-10 text-center max-w-6xl">
+            <div class="reveal inline-block px-6 py-2 rounded-full border border-[#FF9311]/20 bg-[#FF9311]/5 text-[#FF9311] text-[10px] font-black tracking-[0.4em] mb-12 uppercase">
+                Recife • 18, 19 e 20 de setembro -  2026
+            </div>
+            
+            <h1 class="reveal text-5xl md:text-8xl lg:text-9xl font-black text-white leading-[0.9] mb-12 tracking-tighter" style="transition-delay: 200ms">
+                A REVOLUÇÃO <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#FF9311] via-white to-[#FF9311] bg-[length:200%_auto] animate-[pulse_5s_infinite]">DA MEDICINA</span>
+            </h1>
+
+            <p class="reveal text-lg md:text-2xl text-white/60 max-w-4xl mx-auto mb-16 leading-relaxed font-light" style="transition-delay: 400ms">
+                O sistema tradicional não te prepara para a realidade atual da medicina. O <span class="text-white font-bold">CONEM 2026</span> prepara você para o futuro. Tecnologia, ciência e networking. <span class="text-[#FF9311] font-bold">Tudo em um só lugar.</span>
+            </p>
+
+            <div class="reveal flex flex-col items-center" style="transition-delay: 600ms">
+                <a href="#oferta" class="group relative bg-[#E23100] text-white px-14 py-7 rounded-2xl text-xl font-black glow-orange animate-pulse-cta transition-all hover:bg-[#ff3b00] flex items-center gap-4">
+                    GARANTIR MEU ACESSO PROMOCIONAL
+                    <i data-lucide="chevron-right" class="transition-transform group-hover:translate-x-1"></i>
+                </a>
+                
+                <!-- Countdown -->
+                <div id="countdown" class="flex gap-4 md:gap-12 justify-center mt-20">
+                    <div class="text-center group">
+                        <div id="days" class="text-4xl md:text-7xl font-black text-[#FF9311] text-glow-gold tabular-nums transition-transform group-hover:scale-110">00</div>
+                        <div class="text-[10px] text-white/40 font-black tracking-widest mt-3">DIAS</div>
+                    </div>
+                    <div class="text-center group">
+                        <div id="hours" class="text-4xl md:text-7xl font-black text-[#FF9311] text-glow-gold tabular-nums transition-transform group-hover:scale-110">00</div>
+                        <div class="text-[10px] text-white/40 font-black tracking-widest mt-3">HORAS</div>
+                    </div>
+                    <div class="text-center group">
+                        <div id="minutes" class="text-4xl md:text-7xl font-black text-[#FF9311] text-glow-gold tabular-nums transition-transform group-hover:scale-110">00</div>
+                        <div class="text-[10px] text-white/40 font-black tracking-widest mt-3">MINUTOS</div>
+                    </div>
+                    <div class="text-center group">
+                        <div id="seconds" class="text-4xl md:text-7xl font-black text-[#FF9311] text-glow-gold tabular-nums transition-transform group-hover:scale-110">00</div>
+                        <div class="text-[10px] text-white/40 font-black tracking-widest mt-3">SEGUNDOS</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Floating Blurs -->
+        <div class="absolute top-1/2 left-10 w-48 h-48 glass-premium rounded-full blur-[120px] opacity-20 animate-blob"></div>
+        <div class="absolute top-1/3 right-10 w-64 h-64 bg-[#FF9311]/10 rounded-full blur-[150px] opacity-20 animate-blob" style="animation-delay: 3s"></div>
+    </section>
+
+    <!-- VISION SECTION -->
+    <section id="visao" class="py-32 bg-[#002846] relative overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-24 items-center">
+                <div class="reveal relative">
+                    <div class="absolute -left-10 top-0 w-2 h-40 bg-gradient-to-b from-[#FF9311] to-transparent shadow-[0_0_20px_rgba(255,147,17,0.4)]"></div>
+                    <div class="text-[#16607C] font-black text-xs tracking-[0.5em] uppercase mb-8">CONGRESSO NORDESTINO 2026</div>
+                    <h2 class="text-4xl md:text-6xl font-black mb-10 leading-[1] tracking-tighter">
+                        NÃO É APENAS UM CONGRESSO. <br>
+                        <span class="text-[#FF9311]">É O SEU PRÓXIMO NÍVEL.</span>
+                    </h2>
+                    <div class="space-y-8 text-white/70 text-lg md:text-xl font-light leading-relaxed">
+                        <p>O mercado mudou. O ensino tradicional não. Os diplomas de ontem não garantem a relevância de amanhã. O <span class="text-white font-bold">CONEM 2026</span> é o portal de quem se prepara para o futuro. Estude com estratégia.</p>
+                        <p class="font-medium text-white/90">Estude com estratégia. Comece a construir o seu currículo e sua rede de networking no lugar certo. </p>
+                        <div class="text-3xl font-black text-white italic pt-8 flex items-center gap-6">
+                            <div class="w-16 h-[1px] bg-[#FF9311]"></div>
+                            O futuro pertence a quem se antecipa.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-8 relative">
+                    <div class="space-y-8 pt-16">
+                        <div class="glass-card p-10 rounded-[40px] reveal group" style="transition-delay: 200ms">
+                            <i data-lucide="clock" class="text-[#FF9311] mb-6 group-hover:scale-110 transition-transform" size="40"></i>
+                            <h3 class="font-black text-xl mb-3 uppercase tracking-tight">Visão Mercado</h3>
+                            <p class="text-sm text-white/50 leading-relaxed">Prepare sua carreira médica de alto valor e garanta o seu espaço.</p>
+                        </div>
+                        <div class="glass-card p-10 rounded-[40px] reveal group" style="transition-delay: 400ms">
+                            <i data-lucide="award" class="text-[#FF9311] mb-6 group-hover:scale-110 transition-transform" size="40"></i>
+                            <h3 class="font-black text-xl mb-3 uppercase tracking-tight">Autoridade</h3>
+                            <p class="text-sm text-white/50 leading-relaxed">Certificação estratégica para as residências mais disputadas.</p>
+                        </div>
+                    </div>
+                    <div class="space-y-8">
+                        <div class="glass-card p-10 rounded-[40px] reveal group" style="transition-delay: 300ms">
+                            <i data-lucide="users" class="text-[#FF9311] mb-6 group-hover:scale-110 transition-transform" size="40"></i>
+                            <h3 class="font-black text-xl mb-3 uppercase tracking-tight">Conexões</h3>
+                            <p class="text-sm text-white/50 leading-relaxed">Networking exclusivo com os maiores líderes da saúde.</p>
+                        </div>
+                        <div class="glass-card p-10 rounded-[40px] reveal group" style="transition-delay: 500ms">
+                            <i data-lucide="book-open" class="text-[#FF9311] mb-6 group-hover:scale-110 transition-transform" size="40"></i>
+                            <h3 class="font-black text-xl mb-3 uppercase tracking-tight">Inovação</h3>
+                            <p class="text-sm text-white/50 leading-relaxed">Prática clínica com as tecnologias de fronteira.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOCAL SECTION -->
+    <section id="local" class="relative py-48 bg-[#002846] overflow-hidden">
+        <div class="absolute inset-0 z-0 scale-105 animate-[pulse_15s_infinite_alternate]">
+            <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=2000" class="w-full h-full object-cover opacity-20" alt="RioMar">
+            <div class="absolute inset-0 bg-gradient-to-b from-[#002846] via-transparent to-[#002846]"></div>
+        </div>
+        
+        <div class="container mx-auto px-6 relative z-10 text-center">
+            <div class="reveal">
+                <h2 class="text-5xl md:text-8xl font-black mb-10 tracking-tighter uppercase leading-[0.9]">
+                    SOFISTICAÇÃO NO <br>
+                    <span class="text-white/20">CORAÇÃO DE RECIFE</span>
+                </h2>
+                <p class="text-xl md:text-2xl text-white/70 max-w-4xl mx-auto font-light leading-relaxed mb-16">
+                    Uma experiência imersiva no RioMar Shopping. Onde o aprendizado encontra o máximo conforto, status e segurança.
+                </p>
+            </div>
+            
+            <div class="reveal flex flex-col md:flex-row items-center justify-center gap-16 md:gap-32 font-black text-2xl md:text-4xl uppercase tracking-tighter" style="transition-delay: 300ms">
+                <div class="flex flex-col items-center gap-6 group">
+                    <div class="w-24 h-24 glass-premium rounded-full flex items-center justify-center text-[#E23100] group-hover:scale-110 transition-transform shadow-2xl">
+                        <i data-lucide="map-pin" size="48"></i>
+                    </div>
+                    <span class="text-white">Shopping RioMar Recife</span>
+                </div>
+                <div class="flex flex-col items-center gap-6 group">
+                    <div class="w-24 h-24 glass-premium rounded-full flex items-center justify-center text-[#FF9311] group-hover:scale-110 transition-transform shadow-2xl">
+                        <i data-lucide="calendar" size="48"></i>
+                    </div>
+                    <span class="text-white">18, 19 e 20 de setembro -  2026</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OFFER SECTION -->
+    <section id="oferta" class="py-32 bg-[#002846]">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <div class="reveal text-center mb-24">
+                <h2 class="text-4xl md:text-7xl font-black mb-6 uppercase tracking-tighter">SEU  <span class="text-[#FF9311]">PASSAPORTE</span></h2>
+                <p class="text-white/40 text-xl font-light">Lote inaugural com vagas estritamente limitadas.</p>
+            </div>
+
+            <div class="reveal glass-premium rounded-[60px] p-8 md:p-20 border-white/10 relative overflow-hidden group">
+                <div class="absolute -top-32 -right-32 w-[500px] h-[500px] bg-[#FF9311]/10 blur-[150px] rounded-full group-hover:scale-125 transition-transform duration-1000"></div>
+                
+                <div class="grid lg:grid-cols-2 gap-16 relative z-10">
+                    <div class="space-y-12">
+                        <h3 class="text-3xl font-black uppercase tracking-tight">CONEM FULL PASS</h3>
+                        <div class="space-y-8">
+                            <div class="flex items-start gap-6 group/item">
+                                <div class="w-8 h-8 rounded-full bg-[#FF9311]/20 flex items-center justify-center shrink-0 mt-1 group-hover/item:bg-[#FF9311] transition-all">
+                                    <i data-lucide="check-circle-2" class="text-[#FF9311] group-hover/item:text-[#002846]" size="20"></i>
+                                </div>
+                                <span class="text-lg md:text-xl font-medium text-white/90">Acesso total aos 3 dias de imersão presencial.</span>
+                            </div>
+                            <div class="flex items-start gap-6 group/item">
+                                <div class="w-8 h-8 rounded-full bg-[#FF9311]/20 flex items-center justify-center shrink-0 mt-1 group-hover/item:bg-[#FF9311] transition-all">
+                                    <i data-lucide="check-circle-2" class="text-[#FF9311] group-hover/item:text-[#002846]" size="20"></i>
+                                </div>
+                                <span class="text-lg md:text-xl font-medium text-white/90">Certificado validado em todo o país.</span>
+                            </div>
+                            <div class="flex items-start gap-6 group/item">
+                                <div class="w-8 h-8 rounded-full bg-[#FF9311]/20 flex items-center justify-center shrink-0 mt-1 group-hover/item:bg-[#FF9311] transition-all">
+                                    <i data-lucide="check-circle-2" class="text-[#FF9311] group-hover/item:text-[#002846]" size="20"></i>
+                                </div>
+                                <span class="text-lg md:text-xl font-medium text-white/90">Acesso à arena científica, aos minicursos e ao hall de networking.</span>
+                            </div>
+                        </div>
+
+                        <div class="bg-[#E23100]/10 border border-[#E23100]/30 rounded-[32px] p-8 mt-12 backdrop-blur-md relative overflow-hidden">
+                            <div class="flex gap-6 relative z-10">
+                                <div class="text-4xl animate-bounce">🎁</div>
+                                <div>
+                                    <h4 class="font-black text-[#E23100] text-xl uppercase mb-3">KIT CONGRESSISTA EXCLUSIVO</h4>
+                                    <p class="text-white/60 text-sm leading-relaxed italic">As vagas para o <strong>CONEM 2026</strong> são limitadas!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col justify-center items-center text-center p-12 glass-premium rounded-[50px] border-[#FF9311]/20 shadow-2xl">
+                        <div class="text-white/40 line-through text-2xl mb-4 font-light uppercase tracking-widest">De R$ 497,00</div>
+                        <div class="text-7xl md:text-9xl font-black text-[#FF9311] mb-8 text-glow-gold tracking-tighter drop-shadow-2xl">
+                            R$ 239
+                        </div>
+                        <div class="text-white/60 font-black mb-14 text-lg uppercase tracking-[0.3em] italic">Pagamento Único</div>
+                        
+                        <a href="https://web.eventogyn.com.br/event/conem2026/site/content/inscricoes" class="w-full bg-[#E23100] hover:bg-[#ff3b00] text-white py-8 rounded-3xl text-2xl font-black transition-all glow-orange animate-pulse-cta uppercase tracking-[0.1em]" target="_blank"
+rel="noopener noreferrer">
+                            EU QUERO!
+                        </a>
+                        
+                        <div class="mt-10 flex items-center gap-3 text-white/30 text-[10px] font-black uppercase tracking-[0.3em]">
+                            <i data-lucide="shield-check" size="16"></i> 100% SEGURO & CRIPTOGRAFADO
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WORKSHOP SECTION -->
+    <section id="minicursos" class="py-32 bg-[#002846]">
+        <div class="container mx-auto px-6 text-center">
+            <div class="reveal">
+                <h2 class="text-4xl md:text-7xl font-black mb-8 uppercase tracking-tighter leading-none">DOMINE A <span class="text-[#16607C]">TÉCNICA</span></h2>
+                <p class="text-white/50 text-xl font-light max-w-3xl mx-auto mb-20 leading-relaxed">
+                    Aulas práticas hands-on. Desenvolva suas habilidades para além da teoria.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-10 max-w-7xl mx-auto">
+                
+                <a href="edital.pdf" target="_blank" download>
+                <div class="reveal glass-premium hover:bg-[#16607C]/40 p-14 rounded-[50px] transition-all flex flex-col items-center gap-8 border-transparent hover:border-[#16607C]/50 hover:-translate-y-3 cursor-pointer group" style="transition-delay: 100ms">
+                    <div class="w-20 h-20 bg-[#16607C]/30 rounded-3xl flex items-center justify-center text-white group-hover:bg-[#16607C] group-hover:scale-110 transition-all shadow-xl">
+                        <i data-lucide="clock" size="32"></i>
+                    </div>
+                    <div class="space-y-4">
+                        <h4 class="font-black text-2xl uppercase tracking-tight">GRADE HORÁRIA</h4>
+                        <p class="text-white/40 text-sm font-medium">Confira todas as salas e palestras confirmadas.</p>
+                    </div>
+                </div>
+                </a>
+                
+                <a href="EDITALPCONEM.pdf" target="_blank" download>
+                <div class="reveal glass-premium hover:bg-[#16607C]/40 p-14 rounded-[50px] transition-all flex flex-col items-center gap-8 border-transparent hover:border-[#16607C]/50 hover:-translate-y-3 cursor-pointer group" style="transition-delay: 200ms">
+                    <div class="w-20 h-20 bg-[#16607C]/30 rounded-3xl flex items-center justify-center text-white group-hover:bg-[#16607C] group-hover:scale-110 transition-all shadow-xl">
+                        <i data-lucide="file-text" size="32"></i>
+                    </div>
+                    <div class="space-y-4">
+                        <h4 class="font-black text-2xl uppercase tracking-tight">EDITAL PRÁTICO</h4>
+                        <p class="text-white/40 text-sm font-medium">Regras para as simulações em ambiente real.</p>
+                    </div>
+                </div>
+                </a>
+                
+                <a href="https://form.jotform.com/eventogyn/conem-minicursos" target="_blank" download>
+                <div class="reveal glass-premium hover:bg-[#16607C]/40 p-14 rounded-[50px] transition-all flex flex-col items-center gap-8 border-transparent hover:border-[#16607C]/50 hover:-translate-y-3 cursor-pointer group" style="transition-delay: 300ms">
+                    <div class="w-20 h-20 bg-[#16607C]/30 rounded-3xl flex items-center justify-center text-white group-hover:bg-[#16607C] group-hover:scale-110 transition-all shadow-xl">
+                        <i data-lucide="send" size="32"></i>
+                    </div>
+                    <div class="space-y-4">
+                        <h4 class="font-black text-2xl uppercase tracking-tight">PROPOSTA</h4>
+                        <p class="text-white/40 text-sm font-medium">Submeta sua proposta de workshop acadêmico.</p>
+                    </div>
+                </div>
+                </a>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- SCIENTIFIC SECTION -->
+    <section id="cientifico" class="py-40 bg-[#002846] relative overflow-hidden">
+        <div class="absolute top-1/2 left-0 w-[600px] h-[600px] bg-[#FF9311]/5 blur-[200px] rounded-full pointer-events-none"></div>
+        
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="grid lg:grid-cols-2 gap-32 items-center">
+                <div class="reveal">
+                    <div class="text-[#E23100] font-black text-xs tracking-[0.5em] uppercase mb-8">RESIDÊNCIA & CURRÍCULO</div>
+                    <h2 class="text-4xl md:text-6xl font-black mb-12 leading-[1] tracking-tighter uppercase">
+                        CIÊNCIA E <br>
+                        <span class="text-[#FF9311]">RECONHECIMENTO</span>
+                    </h2>
+                    <p class="text-xl text-white/60 mb-12 font-light leading-relaxed">
+                        Contribua para o avanço da medicina no Nordeste. A submissão de trabalhos no CONEM 2026 é a vitrine do seu currículo acadêmico e o começo da sua jornada rumo à residência médica. 
+                    </p>
+                    
+                    <div class="inline-flex items-center gap-6 bg-white/5 border border-white/10 px-10 py-5 rounded-[24px] mb-20">
+                        <span class="text-white/40 font-bold uppercase text-xs tracking-[0.3em]">Taxa de Submissão</span>
+                        <span class="text-4xl font-black text-[#FF9311] drop-shadow-xl">R$ 55,00</span>
+                    </div>
+
+                    <div class="space-y-8">
+                        <a href="editalconem2026.pdf" class="flex items-center gap-8 text-white/80 hover:text-[#FF9311] transition-all group" download>
+                            <div class="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center group-hover:bg-[#FF9311] group-hover:text-[#002846] transition-all shadow-2xl">
+                                <i data-lucide="file-text" size="24"></i>
+                            </div>
+                            <span class="text-xl font-bold uppercase tracking-tight">Edital nº 1 – Regras de Submissão</span>
+                        </a>
+                        <a href="#" class="flex items-center gap-8 text-white/80 hover:text-[#FF9311] transition-all group">
+                            <div class="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center group-hover:bg-[#FF9311] group-hover:text-[#002846] transition-all shadow-2xl">
+                                <i data-lucide="download" size="24"></i>
+                            </div>
+                            <span class="text-xl font-bold uppercase tracking-tight">Download do Template Oficial (em breve)</span>
+                        </a>
+                        <a href="#" class="flex items-center gap-8 text-white/80 hover:text-[#FF9311] transition-all group">
+                            <div class="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center group-hover:bg-[#FF9311] group-hover:text-[#002846] transition-all shadow-2xl">
+                                <i data-lucide="calendar" size="24"></i>
+                            </div>
+                            <span class="text-xl font-bold uppercase tracking-tight">Calendário de Apresentações (em breve)</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="space-y-16">
+                    <div class="reveal flex gap-12 group" style="transition-delay: 200ms">
+                        <div class="w-24 h-24 bg-white text-[#002846] rounded-[32px] flex items-center justify-center shrink-0 shadow-[0_20px_40px_rgba(255,255,255,0.15)] group-hover:scale-110 group-hover:rotate-3 transition-all">
+                            <i data-lucide="check-circle-2" size="40"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-3xl font-black mb-4 uppercase tracking-tight group-hover:text-[#FF9311] transition-colors">01 — Prepare-se</h3>
+                            <p class="text-white/50 text-lg leading-relaxed font-light">Estude atentamente o edital e compreenda os critérios de avaliação. Uma boa submissão começa com estratégia.</p>
+                        </div>
+                    </div>
+                    <div class="reveal flex gap-12 group" style="transition-delay: 400ms">
+                        <div class="w-24 h-24 bg-white text-[#002846] rounded-[32px] flex items-center justify-center shrink-0 shadow-[0_20px_40px_rgba(255,255,255,0.15)] group-hover:scale-110 group-hover:rotate-3 transition-all">
+                            <i data-lucide="send" size="40"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-3xl font-black mb-4 uppercase tracking-tight group-hover:text-[#FF9311] transition-colors">02 — Submeta</h3>
+                            <p class="text-white/50 text-lg leading-relaxed font-light">Envie seu trabalho com segurança e rigor técnico. Garanta que cada detalhe esteja alinhado às exigências.</p>
+                        </div>
+                    </div>
+                    <div class="reveal flex gap-12 group" style="transition-delay: 600ms">
+                        <div class="w-24 h-24 bg-white text-[#002846] rounded-[32px] flex items-center justify-center shrink-0 shadow-[0_20px_40px_rgba(255,255,255,0.15)] group-hover:scale-110 group-hover:rotate-3 transition-all">
+                            <i data-lucide="video" size="40"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-3xl font-black mb-4 uppercase tracking-tight group-hover:text-[#FF9311] transition-colors">03 — Apresente</h3>
+                            <p class="text-white/50 text-lg leading-relaxed font-light">Baixe o template oficial, finalize seu e-poster e apresente com clareza, confiança e impacto.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOCIAL PROOF -->
+    <section class="py-32 bg-[#002846]">
+        <div class="container mx-auto px-6 text-center">
+            <div class="reveal">
+                <h2 class="text-4xl md:text-8xl font-black mb-24 uppercase tracking-tighter">VIVÊNCIAS QUE <span class="text-[#FF9311]">TRANSFORMAM</span></h2>
+            </div>
+
+             <!-- SHORTS GRID -->
+      <div class="grid grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10">
+        <!-- Depoimento 1 -->
+        <div onclick="playVideoInline(this, '0AI6CkSJseU')" class="relative group rounded-[32px] md:rounded-[48px] overflow-hidden glass-field aspect-[9/16] bg-slate-900 cursor-pointer reveal transition-all duration-500 hover:shadow-[0_0_60px_rgba(174,51,63,0.3)] hover:-translate-y-2">
+          <div class="absolute inset-0 video-content">
+            <img src="https://img.youtube.com/vi/0AI6CkSJseU/maxresdefault.jpg" alt="Depoimento 1" class="w-full h-full object-cover transition-all duration-1000 opacity-40 group-hover:opacity-80 group-hover:scale-110" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+            <div class="absolute inset-0 flex items-center justify-center">
+              <div class="w-16 h-16 md:w-24 md:h-24 bg-white/5 backdrop-blur-2xl text-white rounded-full flex items-center justify-center transform transition-all group-hover:scale-110 border border-white/10 group-hover:bg-[#AE333F] group-hover:border-transparent">
+                <i data-lucide="play" fill="currentColor" size="32"></i>
+              </div>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 p-6 md:p-10 pointer-events-none">
+              <p class="text-white font-black text-lg md:text-2xl tracking-tighter mb-1">KLEYVIANY</p>
+              <p class="text-white/40 text-[8px] md:text-[10px] font-black uppercase tracking-[0.3em]">Acadêmico de Medicina - UFRGS</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Depoimento 2 -->
+        <div onclick="playVideoInline(this, 'vka3EP2vq64')" class="relative group rounded-[32px] md:rounded-[48px] overflow-hidden glass-field aspect-[9/16] bg-slate-900 cursor-pointer reveal transition-all duration-500 hover:shadow-[0_0_60px_rgba(174,51,63,0.3)] hover:-translate-y-2" style="transition-delay: 0.1s;">
+          <div class="absolute inset-0 video-content">
+            <img src="https://img.youtube.com/vi/vka3EP2vq64/maxresdefault.jpg" alt="Depoimento 2" class="w-full h-full object-cover transition-all duration-1000 opacity-40 group-hover:opacity-80 group-hover:scale-110" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+            <div class="absolute inset-0 flex items-center justify-center">
+              <div class="w-16 h-16 md:w-24 md:h-24 bg-white/5 backdrop-blur-2xl text-white rounded-full flex items-center justify-center transform transition-all group-hover:scale-110 border border-white/10 group-hover:bg-[#AE333F] group-hover:border-transparent">
+                <i data-lucide="play" fill="currentColor" size="32"></i>
+              </div>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 p-6 md:p-10 pointer-events-none">
+              <p class="text-white font-black text-lg md:text-2xl tracking-tighter mb-1">AMANDA</p>
+              <p class="text-white/40 text-[8px] md:text-[10px] font-black uppercase tracking-[0.3em]">Acadêmica de Medicina</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Depoimento 3 -->
+        <div onclick="playVideoInline(this, 'BPNQfWm57XY')" class="relative group rounded-[32px] md:rounded-[48px] overflow-hidden glass-field aspect-[9/16] bg-slate-900 cursor-pointer reveal transition-all duration-500 hover:shadow-[0_0_60px_rgba(174,51,63,0.3)] hover:-translate-y-2" style="transition-delay: 0.2s;">
+          <div class="absolute inset-0 video-content">
+            <img src="https://img.youtube.com/vi/BPNQfWm57XY/maxresdefault.jpg" alt="Depoimento 3" class="w-full h-full object-cover transition-all duration-1000 opacity-40 group-hover:opacity-80 group-hover:scale-110" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+            <div class="absolute inset-0 flex items-center justify-center">
+              <div class="w-16 h-16 md:w-24 md:h-24 bg-white/5 backdrop-blur-2xl text-white rounded-full flex items-center justify-center transform transition-all group-hover:scale-110 border border-white/10 group-hover:bg-[#AE333F] group-hover:border-transparent">
+                <i data-lucide="play" fill="currentColor" size="32"></i>
+              </div>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 p-6 md:p-10 pointer-events-none">
+              <p class="text-white font-black text-lg md:text-2xl tracking-tighter mb-1">LUCAS</p>
+              <p class="text-white/40 text-[8px] md:text-[10px] font-black uppercase tracking-[0.3em]">Acadêmico de Medicina - UFSM</p>
+            </div>
+          </div>
+        </div>
+      </div>
+        </div>
+    </section>
+
+    <!-- PARTNERS -->
+    <section class="py-40 relative bg-[#002846]">
+        <div class="absolute inset-0 sand-texture pointer-events-none opacity-5"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="space-y-40">
+                <div class="reveal text-center">
+                    <h3 class="text-[#FF9311] font-black tracking-[0.5em] text-xs mb-20 uppercase">REALIZAÇÃO</h3>
+                    <div class="flex justify-center">
+                        <div class="w-96 h-32 glass-premium rounded-[32px] flex items-center justify-center border-white/10 hover:border-[#FF9311]/30 transition-all shadow-2xl">
+                            <img src="medassina.webp" alt="CPMED Logo" class="h-12 md:h-20 w-auto transform transition-transform group-hover:scale-110 group-hover:rotate-2">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reveal text-center" style="transition-delay: 200ms">
+                    <h3 class="text-[#FF9311] font-black tracking-[0.5em] text-xs mb-20 uppercase">PATROCINADOR MASTER</h3>
+                    <div class="flex justify-center">
+                        <div class="w-96 h-32 glass-premium rounded-[32px] flex items-center justify-center border-white/10 hover:border-[#FF9311]/30 transition-all shadow-2xl">
+                            <img src="medgrupo-branco.webp" alt="CPMED Logo" class="h-16 md:h-20 w-auto transform transition-transform group-hover:scale-110 group-hover:rotate-2">
+                        </div>
+                    </div>
+                </div>
+                <div class="reveal text-center" style="transition-delay: 200ms">
+                    <h3 class="text-[#FF9311] font-black tracking-[0.5em] text-xs mb-20 uppercase">PATROCINADOR DIAMANTE</h3>
+                    <div class="flex justify-center">
+                        <div class="w-96 h-32 glass-premium rounded-[32px] flex items-center justify-center border-white/10 hover:border-[#FF9311]/30 transition-all shadow-2xl">
+                            <img src="dasaeducabranco.png" alt="CPMED Logo" class="h-24 md:h-32 w-auto transform transition-transform group-hover:scale-110 group-hover:rotate-2">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#002846] border-t border-white/5 pt-40 pb-16 relative overflow-hidden">
+        <div class="absolute bottom-0 right-0 w-[800px] h-[800px] bg-[#16607C]/5 blur-[250px] rounded-full translate-x-1/2 translate-y-1/2 pointer-events-none"></div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-24 mb-40">
+                <div class="space-y-12">
+                    <div class="flex items-center gap-4">
+
+                        <span class="font-montserrat font-black text-4xl tracking-tighter text-white">CONEM<span class="text-[#FF9311]">2026</span></span>
+                    </div>
+                    <p class="text-white/40 text-xl font-light leading-relaxed">
+                        O futuro da medicina brasileira passa por aqui. Palestras, minicursos, trabalhos científicos e networking reunidos no maior evento médico do Nordeste.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-[#16607C] font-black text-xs tracking-[0.4em] uppercase mb-16">NAVEGAÇÃO ELITE</h4>
+                    <ul class="space-y-8 font-bold text-white/60">
+                        <li><a href="#vision" class="hover:text-[#FF9311] transition-all hover:translate-x-2 inline-block uppercase tracking-tight">Visão</a></li>
+                        <li><a href="#local" class="hover:text-[#FF9311] transition-all hover:translate-x-2 inline-block uppercase tracking-tight">Local</a></li>
+                        <li><a href="#offer" class="hover:text-[#FF9311] transition-all hover:translate-x-2 inline-block uppercase tracking-tight">Inscrições</a></li>
+                        <li><a href="#minicursos" class="hover:text-[#FF9311] transition-all hover:translate-x-2 inline-block uppercase tracking-tight">Minicursos</a></li>
+                        <li><a href="#scientific" class="hover:text-[#FF9311] transition-all hover:translate-x-2 inline-block uppercase tracking-tight">Trabalhos</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-[#16607C] font-black text-xs tracking-[0.4em] uppercase mb-16">CONTATO</h4>
+                    <p class="text-white/40 mb-12 text-sm font-medium leading-relaxed">Ficou com dúvida? Entre em contato.</p>
+                    <div class="space-y-8">
+                        <div class="flex items-center gap-5 text-white/80 group cursor-pointer hover:text-[#E23100] transition-all">
+                            <div class="w-12 h-12 glass-premium rounded-xl flex items-center justify-center group-hover:bg-[#E23100] transition-all shadow-xl">
+                                <i data-lucide="message-circle" size="20"></i>
+                            </div>
+                            <span class="font-black text-lg">(63) 99242-1841</span>
+                        </div>
+                        <div class="flex items-center gap-5 text-white/80 group cursor-pointer hover:text-[#E23100] transition-all">
+                            <div class="w-12 h-12 glass-premium rounded-xl flex items-center justify-center group-hover:bg-[#E23100] transition-all shadow-xl">
+                                <i data-lucide="send" size="20"></i>
+                            </div>
+                            <span class="font-black text-lg">adm@medassina.com.br</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-16">
+                    <h4 class="text-[#16607C] font-black text-xs tracking-[0.4em] uppercase mb-16">SIGA O CONEM NO INSTAGRAM</h4>
+                    <div class="flex gap-8">
+                        <div class="w-12 h-12 glass-premium rounded-xl flex items-center justify-center group-hover:bg-[#E23100] transition-all shadow-xl">
+                                <i data-lucide="instagram" size="20"></i>
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-16 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-12">
+                <div class="text-white/20 text-[10px] font-black tracking-[0.4em] uppercase text-center md:text-left leading-loose">
+                    CONEM 2026 • TODOS OS DIREITOS RESERVADOS. <br>
+                    FEITO PARA A ELITE MÉDICA DO NORDESTE.
+                </div>
+                <div class="flex gap-12 text-[10px] font-black text-white/40 tracking-[0.3em] uppercase">
+                    <a href="#" class="hover:text-white transition-colors">PRIVACIDADE</a>
+                    <a href="#" class="hover:text-white transition-colors">TERMOS</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP BUTTON -->
+    <a href="https://wa.me/5562981901910?text=Ol%C3%A1%2C%20quero%20falar%20sobre%20o%20CONEM%202026." target="_blank" class="fixed bottom-10 right-10 z-[100] bg-[#25D366] text-white p-6 rounded-full shadow-[0_15px_50px_rgba(37,211,102,0.5)] transition-all hover:scale-110 active:scale-95 animate-bounce">
+        <i data-lucide="message-circle" size="36"></i>
+    </a>
+
+    <script>
+        // Inicializar Lucide Icons
+        lucide.createIcons();
+
+        // Lógica do Menu Mobile Responsive
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const iconMenu = document.getElementById('icon-menu');
+        const iconClose = document.getElementById('icon-close');
+
+        if (menuToggle && mobileMenu) {
+            menuToggle.addEventListener('click', () => {
+                const isClosed = mobileMenu.classList.contains('max-h-0');
+                if (isClosed) {
+                    // Abrir Menu
+                    mobileMenu.classList.remove('max-h-0', 'opacity-0', 'pointer-events-none');
+                    mobileMenu.classList.add('max-h-[500px]', 'opacity-100', 'pointer-events-auto');
+                    iconMenu.classList.add('hidden');
+                    iconClose.classList.remove('hidden');
+                } else {
+                    // Fechar Menu
+                    mobileMenu.classList.add('max-h-0', 'opacity-0', 'pointer-events-none');
+                    mobileMenu.classList.remove('max-h-[500px]', 'opacity-100', 'pointer-events-auto');
+                    iconMenu.classList.remove('hidden');
+                    iconClose.classList.add('hidden');
+                }
+            });
+
+            // Fechar Menu Mobile ao selecionar uma opção
+            document.querySelectorAll('.mobile-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('max-h-0', 'opacity-0', 'pointer-events-none');
+                    mobileMenu.classList.remove('max-h-[500px]', 'opacity-100', 'pointer-events-auto');
+                    iconMenu.classList.remove('hidden');
+                    iconClose.classList.add('hidden');
+                });
+            });
+        }
+
+        // Scroll Reveal Logic
+        const observerOptions = { threshold: 0.15, rootMargin: "0px 0px -50px 0px" };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 60) {
+                nav.classList.add('bg-[#002846]/95', 'backdrop-blur-2xl', 'border-b', 'border-white/5', 'py-4');
+                nav.classList.remove('py-6');
+            } else {
+                nav.classList.remove('bg-[#002846]/95', 'backdrop-blur-2xl', 'border-b', 'border-white/5', 'py-4');
+                nav.classList.add('py-6');
+            }
+        });
+
+         // Countdown Logic
+        const countDownDate = new Date('August 14, 2026 00:00:00').getTime();
+        
+        const updateTimer = () => {
+            const now = new Date().getTime();
+            const distance = countDownDate - now;
+        
+            if (distance <= 0) {
+                document.getElementById('days').innerText = "00";
+                document.getElementById('hours').innerText = "00";
+                document.getElementById('minutes').innerText = "00";
+                document.getElementById('seconds').innerText = "00";
+                return;
+            }
+        
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+            document.getElementById('days').innerText = String(days).padStart(2, '0');
+            document.getElementById('hours').innerText = String(hours).padStart(2, '0');
+            document.getElementById('minutes').innerText = String(minutes).padStart(2, '0');
+            document.getElementById('seconds').innerText = String(seconds).padStart(2, '0');
+        };
+        
+        setInterval(updateTimer, 1000);
+        updateTimer();
+
+        // Smooth reveal stagger for children of reveal
+        document.querySelectorAll('.reveal').forEach((parent, i) => {
+            const children = parent.querySelectorAll('.reveal-child');
+            children.forEach((child, j) => {
+                child.style.transitionDelay = `${(j + 1) * 150}ms`;
+            });
+        });
+        
+         // MODIFICADO: Função para reprodução inline (Shorts)
+        function playVideoInline(container, videoId) {
+          // Evita disparar novamente se já estiver rodando
+          if (container.classList.contains('is-playing')) return;
+          
+          container.classList.add('is-playing');
+          const content = container.querySelector('.video-content');
+          
+          // Cria o iframe do Shorts
+          const iframe = document.createElement('iframe');
+          iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&modestbranding=1&rel=0`;
+          iframe.className = "w-full h-full absolute inset-0 z-10";
+          iframe.setAttribute('frameborder', '0');
+          iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+          iframe.setAttribute('allowfullscreen', 'true');
+          
+          // Limpa o conteúdo visual (thumb/texto) e insere o player
+          content.innerHTML = '';
+          content.appendChild(iframe);
+          
+          // Remove o cursor de ponteiro do container pai já que o play foi dado
+          container.style.cursor = 'default';
+        }
+    
+        // Mantém a função original para outros usos se necessário
+        function playVideo(videoId) {
+          const modal = document.getElementById('videoModal');
+          const iframe = document.getElementById('videoIframe');
+          iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+          modal.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        }
+        
+        function closeVideo() {
+          const modal = document.getElementById('videoModal');
+          const iframe = document.getElementById('videoIframe');
+          iframe.src = '';
+          modal.classList.remove('active');
+          document.body.style.overflow = 'auto';
+        }
+    </script>
+</body>
+</html>

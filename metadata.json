@@ -1,0 +1,8 @@
+{
+  "name": "CONEM 2026 - A Revolução da Medicina",
+  "description": "Landing page oficial para o CONEM 2026 em Recife. Uma experiência de imersão médica de elite com design sofisticado em dark mode.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
